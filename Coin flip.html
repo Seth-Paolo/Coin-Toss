@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<style>
+		p{
+			text-align: center;
+			font-size: 50px;
+		}
+		
+		#COUNT{
+			color: red;
+		}
+		
+		#display{
+			color: green;
+		}
+		
+	
+	
+	</style>
+  </head>
+  <body>
+	<button onclick = "myFunction()">COIN FLIP</button>
+	<p id="wait"></p>
+	<p id="COUNT"></p>
+	<p id="display"></p>
+		<script>
+		function myFunction(){
+			let coin = Math.random();
+			
+			if(coin < 0.5){
+				document.getElementById("wait").innerHTML = "The coin landed on...";
+				setTimeout("document.getElementById('COUNT').innerHTML = '3';", 500);
+				setTimeout("document.getElementById('COUNT').innerHTML = '2';", 1000);
+				setTimeout("document.getElementById('COUNT').innerHTML = '1';", 1500);
+				setTimeout("document.getElementById('COUNT').innerHTML = '';", 2000);
+				setTimeout("document.getElementById('display').innerHTML = 'HEADS';", 2000);
+			}
+			
+			else{
+				document.getElementById("wait").innerHTML = "The coin landed on...";
+				setTimeout("document.getElementById('COUNT').innerHTML = '3';", 500);
+				setTimeout("document.getElementById('COUNT').innerHTML = '2';", 1000);
+				setTimeout("document.getElementById('COUNT').innerHTML = '1';", 1500);
+				setTimeout("document.getElementById('COUNT').innerHTML = '';", 2000);
+				setTimeout("document.getElementById('display').innerHTML = 'TAILS';", 2000);
+			}
+		}
+		</script>
+  </body>
+</html>
